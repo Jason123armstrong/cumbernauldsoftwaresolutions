@@ -200,9 +200,9 @@ p { margin: 0 0 1em; }
 .showcase + .showcase { margin-top: 88px; }
 .showcase.flip .shot-frame { order: 2; }
 .showcase ul { padding: 0; list-style: none; margin: 18px 0 0; }
-.showcase li { display: flex; gap: 12px; margin-bottom: 12px; }
+.showcase li { position: relative; padding-left: 34px; margin-bottom: 12px; }
 .showcase li::before {
-  content: ""; flex-shrink: 0; width: 22px; height: 22px; margin-top: 3px; border-radius: 50%;
+  content: ""; position: absolute; left: 0; top: 3px; width: 22px; height: 22px; border-radius: 50%;
   background: var(--gold) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2306190d' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/14px no-repeat;
 }
 .shot-frame {
