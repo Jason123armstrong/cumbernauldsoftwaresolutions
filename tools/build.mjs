@@ -107,8 +107,8 @@ function footer(p) {
       </ul></div>
     </div>
     <div class="legal">
-      <span>&copy; ${YEAR} Cumbernauld Software Solutions Limited. All rights reserved.</span>
-      <span>Cumbernauld, Scotland, United Kingdom</span>
+      <span>&copy; ${YEAR} Cumbernauld Software Solutions Ltd. All rights reserved.</span>
+      <span>Cumbernauld Software Solutions Ltd is a private limited company registered in Scotland, company number SC717373. Registered office: 26 Wellesley Drive, Cumbernauld, Glasgow, G68 9PG, Scotland.</span>
     </div>
   </div>
 </footer>`;
