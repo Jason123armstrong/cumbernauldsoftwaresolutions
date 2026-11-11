@@ -61,14 +61,15 @@ function readSource(rel) {
   return { meta: JSON.parse(m[1]), body: raw.slice(m[0].length) };
 }
 
-const logo = `<svg width="38" height="38" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#154d2a"/><ellipse cx="32" cy="50" rx="20" ry="5" fill="#1f6a3b"/><path d="M26 50V12" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/><path d="M27 13l17 6.5-17 6.5z" fill="#f2c94c"/><circle cx="40" cy="45" r="5" fill="#fff"/></svg>`;
+/** The company mark (blue CSS circuit logo), on every page. */
+const logo = (p) => `<img class="brand-mark" src="${p}img/company-icon.png" alt="" width="38" height="38">`;
 
 function header(p, nav) {
   const cur = (k) => (nav === k ? ' aria-current="page"' : "");
   return `<a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="${p}index.html">${logo}<span>Cumbernauld Software<small>Solutions Limited</small></span></a>
+    <a class="brand" href="${p}index.html">${logo(p)}<span>Cumbernauld Software<small>Solutions Limited</small></span></a>
     <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">&#9776;</button>
     <nav class="nav" id="site-nav" aria-label="Main">
       <a href="${p}index.html"${cur("home")}>Home</a>
@@ -87,7 +88,7 @@ function footer(p) {
   <div class="wrap">
     <div class="cols">
       <div>
-        <a class="brand" href="${p}index.html">${logo}<span>Cumbernauld Software<small>Solutions Limited</small></span></a>
+        <a class="brand" href="${p}index.html">${logo(p)}<span>Cumbernauld Software<small>Solutions Limited</small></span></a>
         <p style="margin-top:16px;max-width:320px">Independent software company in Cumbernauld, Scotland. We make Golf Score &amp; More and Chessosaurus for Android.</p>
       </div>
       <div><h4>Products</h4><ul>

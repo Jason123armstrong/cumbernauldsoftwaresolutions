@@ -370,3 +370,54 @@ kbd, .ui {
 .app-tile.golf .tile-cta { color: var(--green-600); }
 .app-tile.dino .tile-cta { color: #a83f12; }
 @media (max-width: 760px) { .app-tiles { grid-template-columns: 1fr; } }
+
+/* App development theme for the company landing page (owner, 11 Nov 2026). Scoped to .dev; golf pages keep their look. */
+.dev { --dev-navy: #071426; --dev-deep: #0a1f3d; --dev-blue: #1e8bff; --dev-cyan: #3fd2ff; --dev-ink: #0b1b33; }
+body:has(.dev) .site-header { background: rgba(7, 20, 38, .92); border-bottom-color: rgba(63, 210, 255, .18); }
+body:has(.dev) .site-header .nav a[aria-current="page"] { color: var(--dev-cyan); }
+body:has(.dev) .site-header .nav .cta { background: var(--dev-blue); color: #fff; }
+.dev-hero {
+  position: relative; overflow: hidden; color: #fff;
+  background:
+    radial-gradient(900px 500px at 85% 10%, rgba(30, 139, 255, .28), transparent 60%),
+    radial-gradient(800px 600px at -10% 110%, rgba(63, 210, 255, .16), transparent 60%),
+    linear-gradient(160deg, var(--dev-deep), var(--dev-navy));
+}
+.dev-hero::before {
+  content: ""; position: absolute; inset: 0; opacity: .22; pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='none' stroke='%233fd2ff' stroke-width='1.2'%3E%3Cpath d='M10 40h40l20 20h40'/%3E%3Cpath d='M30 120h30l20-20h60'/%3E%3Cpath d='M120 10v30l-20 20'/%3E%3C/g%3E%3Cg fill='%233fd2ff'%3E%3Ccircle cx='10' cy='40' r='3'/%3E%3Ccircle cx='110' cy='60' r='3'/%3E%3Ccircle cx='30' cy='120' r='3'/%3E%3Ccircle cx='140' cy='100' r='3'/%3E%3Ccircle cx='120' cy='10' r='3'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 160px;
+}
+.dev-hero .wrap { position: relative; display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; padding-top: 72px; padding-bottom: 72px; }
+.dev-hero h1 em { font-style: normal; color: var(--dev-cyan); }
+.dev-hero .lead { color: rgba(255, 255, 255, .8); }
+.dev-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px; margin-bottom: 18px; padding: 6px 12px; border-radius: 8px;
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace; font-size: 13px; color: var(--dev-cyan);
+  background: rgba(63, 210, 255, .08); border: 1px solid rgba(63, 210, 255, .3);
+}
+.dev-eyebrow .dot { width: 8px; height: 8px; border-radius: 50%; background: #3ddc84; box-shadow: 0 0 8px #3ddc84; }
+.dev-btn { background: var(--dev-blue); color: #fff; box-shadow: 0 8px 24px rgba(30, 139, 255, .35); }
+.dev-btn:hover { background: #3a9bff; color: #fff; }
+.dev-stack { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 28px 0 0; padding: 0; }
+.dev-stack li {
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace; font-size: 13px; color: rgba(255, 255, 255, .85);
+  padding: 5px 10px; border-radius: 999px; border: 1px solid rgba(63, 210, 255, .35); background: rgba(10, 31, 61, .6);
+}
+.dev-logo { display: grid; place-items: center; }
+.dev-logo img { width: min(480px, 100%); filter: drop-shadow(0 0 30px rgba(30, 139, 255, .45)); }
+.dev .eyebrow { font-family: ui-monospace, "Cascadia Code", Consolas, monospace; color: var(--dev-blue); letter-spacing: 0; text-transform: none; }
+.dev .feature .icon { background: rgba(30, 139, 255, .1); color: var(--dev-blue); }
+.dev .feature { border-top: 3px solid var(--dev-blue); }
+.dev .app-tile { border: 1px solid rgba(30, 139, 255, .18); }
+.dev .app-tile:focus-visible { outline-color: var(--dev-blue); }
+.dev .section.alt { background: linear-gradient(180deg, #eef5ff, #f7fbff); }
+.dev .app-tile.dino .tile-shot img { object-position: center 30%; }
+@media (max-width: 860px) { .dev-hero .wrap { grid-template-columns: 1fr; padding-top: 48px; padding-bottom: 48px; } .dev-logo { order: -1; } .dev-logo img { width: min(340px, 90%); } }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .dev .section.alt { background: #0c1a2e; } }
+:root[data-theme="dark"] .dev .section.alt { background: #0c1a2e; }
+
+.brand-mark { width: 38px; height: 38px; border-radius: 10px; background: #071426; object-fit: contain; }
+.dev .features { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 960px) { .dev .features { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .dev .features { grid-template-columns: 1fr; } }
