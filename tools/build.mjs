@@ -73,6 +73,7 @@ function header(p, nav) {
     <nav class="nav" id="site-nav" aria-label="Main">
       <a href="${p}index.html"${cur("home")}>Home</a>
       <a href="${p}golf-score-and-more.html"${cur("app")}>Golf Score &amp; More</a>
+      <a href="https://www.chessosaurus.com/">Chessosaurus</a>
       <a href="${p}wiki/index.html"${cur("wiki")}>Guide</a>
       <a href="${p}index.html#company"${cur("company")}>Company</a>
       <a class="cta" href="${p}index.html#contact">Contact us</a>
@@ -87,10 +88,11 @@ function footer(p) {
     <div class="cols">
       <div>
         <a class="brand" href="${p}index.html">${logo}<span>Cumbernauld Software<small>Solutions Limited</small></span></a>
-        <p style="margin-top:16px;max-width:320px">Independent software company in Cumbernauld, Scotland. We make Golf Score &amp; More for Android.</p>
+        <p style="margin-top:16px;max-width:320px">Independent software company in Cumbernauld, Scotland. We make Golf Score &amp; More and Chessosaurus for Android.</p>
       </div>
-      <div><h4>Product</h4><ul>
+      <div><h4>Products</h4><ul>
         <li><a href="${p}golf-score-and-more.html">Golf Score &amp; More</a></li>
+        <li><a href="https://www.chessosaurus.com/">Chessosaurus</a></li>
         <li><a href="${p}golf-score-and-more.html#features">Features</a></li>
         <li><a href="${p}golf-score-and-more.html#screens">Screenshots</a></li>
       </ul></div>
