@@ -421,3 +421,27 @@ body:has(.dev) .site-header .nav .cta { background: var(--dev-blue); color: #fff
 .dev .features { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 @media (max-width: 960px) { .dev .features { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 560px) { .dev .features { grid-template-columns: 1fr; } }
+
+/* Dark app tiles, easy-to-read text, Chessosaurus first (owner, 11 Nov 2026) */
+.dev .app-tiles { grid-template-columns: 1fr; gap: 28px; max-width: 980px; margin-inline: auto; }
+.dev .app-tile { flex-direction: row; background: linear-gradient(150deg, #0e2a4f, #071426); color: #fff; border: 1px solid rgba(63, 210, 255, .35); box-shadow: 0 16px 40px rgba(7, 20, 38, .35); }
+.dev .app-tile:hover { color: #fff; box-shadow: 0 22px 48px rgba(7, 20, 38, .45); }
+.dev .tile-shot { flex: 0 0 300px; height: auto; min-height: 320px; }
+.dev .tile-body { padding: 30px 32px; gap: 14px; justify-content: center; }
+.dev .tile-head { margin-top: 0; }
+.dev .tile-head div { padding-top: 0; }
+.dev .tile-icon { width: 76px; height: 76px; border-color: rgba(255, 255, 255, .9); }
+.dev .tile-head h3 { font-size: 28px; color: #fff; }
+.dev .app-tile .tile-head p { font-size: 15px; color: #8fe3ff; }
+.dev .tile-body > p { font-size: 19px; line-height: 1.55; color: #f1f6ff; }
+.dev .tile-body ul { font-size: 18px; line-height: 1.7; color: #e6eefc; }
+.dev .tile-body li::marker { color: #3fd2ff; }
+.dev .app-tile .tile-cta { color: #3fd2ff; font-size: 18px; }
+.dev .app-tile.dino .tile-shot { background: #5fb6e8; }
+@media (max-width: 760px) {
+  .dev .app-tile { flex-direction: column; }
+  .dev .tile-shot { flex-basis: auto; height: 240px; min-height: 0; }
+  .dev .tile-body { padding: 22px 20px 26px; }
+  .dev .tile-head h3 { font-size: 24px; }
+  .dev .tile-body > p { font-size: 17px; } .dev .tile-body ul { font-size: 16px; }
+}
